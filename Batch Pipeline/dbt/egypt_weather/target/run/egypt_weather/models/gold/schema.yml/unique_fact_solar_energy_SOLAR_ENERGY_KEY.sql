@@ -1,0 +1,11 @@
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+        select *
+        from EGYPT_WEATHER_DB.dbt_test__audit.unique_fact_solar_energy_SOLAR_ENERGY_KEY
+    
+      
+    ) dbt_internal_test
